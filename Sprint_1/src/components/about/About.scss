@@ -1,0 +1,49 @@
+.about {
+  padding: 1.5rem 1rem 2.5rem 1rem;
+  &__highlight {
+    border-bottom: 0.063rem solid #afafaf;
+    padding-bottom: 0.25rem;
+  }
+  &__header {
+    margin: 0;
+    font-family: 'Avenir-Bold';
+  }
+  &__from {
+    display: flex;
+    flex-direction: row;
+  }
+  &__uploaded-by {
+    margin: 1rem 0;
+    font-family: 'Avenir-Demi';
+    font-size: 1rem;
+  }
+  &__date {
+    align-self: center;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    color: #afafaf;
+    
+  }
+  &__stats {
+    display: flex;
+    flex-direction: row;
+  }
+  &__views-container {
+    display: flex;
+    flex-direction: row;
+    width: 9rem;
+  }
+  &__likes-container {
+    display: flex;
+    flex-direction: row;
+    width: 9rem;
+  }
+  &__icon {
+    padding-right: 0.5rem;
+  }
+  &__text {
+    margin: 1.5rem 0 0 0;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
