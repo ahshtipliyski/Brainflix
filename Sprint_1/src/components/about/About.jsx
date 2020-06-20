@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.scss';
-import '../about/About.scss';
+import '../About/About.scss';
 import viewsIcon from '../../assets/Icons/SVG/Icon-views.svg';
 import likesIcon from '../../assets/Icons/SVG/Icon-likes.svg';
 

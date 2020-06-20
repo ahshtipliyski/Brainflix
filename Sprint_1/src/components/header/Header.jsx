@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../App.scss'
-import '../header/Header.scss';
+import '../Header/Header.scss';
 import logo from '../../assets/Logo/Logo-brainflix.svg';
 import userIcon from '../../assets/Images/Mohan-muruge.jpg';
-import search from '../../assets/Icons/SVG/Icon-search.svg'
+// import search from '../../assets/Icons/SVG/Icon-search.svg'
 
 
 function Header() {

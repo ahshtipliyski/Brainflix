@@ -1,5 +1,5 @@
 import React from "react";
-import '../hero/Hero.scss';
+import '../Hero/Hero.scss';
 import mainVideo from '../../assets/Video/BrainStation-Sample-Video.mp4';
 import posterVideo from '../../assets/Images/video-list-0.jpg';
 // import videoPlay from '../../assets/Icons/SVG/Icon-play.svg';
@@ -10,7 +10,7 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero__background"></div>
-      <video controls
+      <video //controls
         src={mainVideo} 
         type="video/mp4" 
         poster={posterVideo}
