@@ -1,7 +1,7 @@
 import React from "react";
 import '../Hero/Hero.scss';
-import mainVideo from '../../assets/Video/BrainStation-Sample-Video.mp4';
-import posterVideo from '../../assets/Images/video-list-0.jpg';
+//import mainVideo from '../../assets/Video/BrainStation-Sample-Video.mp4';
+//import posterVideo from '../../assets/Images/video-list-0.jpg';
 // import videoPlay from '../../assets/Icons/SVG/Icon-play.svg';
 // import videoFull from '../../assets/Icons/SVG/Icon-fullscreen.svg';
 // import videoSound from '../../assets/Icons/SVG/Icon-volume.svg';
@@ -11,9 +11,9 @@ function Hero() {
     <section className="hero">
       <div className="hero__background"></div>
       <video //controls
-        src={mainVideo} 
+        // src={mainVideo} 
         type="video/mp4" 
-        poster={posterVideo}
+        // poster={posterVideo}
         className="hero__video">
         Sorry, your browser doesn't support embedded videos.
       </video>

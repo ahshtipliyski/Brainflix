@@ -27,7 +27,7 @@ class CommentsSection extends React.Component {
   }
   componentDidMount() {
     axios.get('/data.json')
-    .then(res => this.setState({comments: res.data}))
+    .then(res => this.setState({comments: res.data[0].comments}))
   }
   
   render() {

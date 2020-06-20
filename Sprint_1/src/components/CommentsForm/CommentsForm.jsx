@@ -1,6 +1,7 @@
 import React from 'react'
-import userIcon from '../../assets/Images/Mohan-muruge.jpg';
+//import userIcon from '../../../public/Images/Mohan-muruge.jpg';
 import '../CommentsList/CommentsList.scss';
+
 
 export default function CommentsForm({handleSubmit}) {
     return (
@@ -8,7 +9,7 @@ export default function CommentsForm({handleSubmit}) {
         <h3 className="comment__counter">3 Comments</h3>
         <div className="comment__form-container">
           <form onSubmit={handleSubmit}>
-            <img src={userIcon} alt="User Icon" className="comment__icon"/>
+            <img src="" alt="User Icon" className="comment__icon"/>    {/* src was => {userIcon} */}
             <label htmlFor="comment" className="comment__input-label">JOIN THE CONVERSATION</label>
               <textarea 
               className="comment__text-container" 

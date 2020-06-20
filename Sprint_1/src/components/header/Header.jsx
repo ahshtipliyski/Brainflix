@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.scss'
 import '../Header/Header.scss';
 import logo from '../../assets/Logo/Logo-brainflix.svg';
-import userIcon from '../../assets/Images/Mohan-muruge.jpg';
+//import userIcon from '../../../public/Images/Mohan-muruge.jpg';
 // import search from '../../assets/Icons/SVG/Icon-search.svg'
 
 
@@ -15,7 +15,7 @@ function Header() {
       </div>
       <div className="nav-bar__account">
         <button className="nav-bar__upload-button"><span className="nav-bar__plus">+</span> UPLOAD</button>
-        <img src={userIcon} alt="User Icon" className="nav-bar__icon"/>
+        <img src="" alt="User Icon" className="nav-bar__icon"/>   {/*  src={userIcon} */}
       </div>
     </nav>
   );
