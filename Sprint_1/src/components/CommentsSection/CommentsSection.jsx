@@ -16,7 +16,7 @@ class CommentsSection extends React.Component {
     this.setState({comments: [...this.state.comments, {
         id: Date.now(),
         name: "Mohan Muruge",
-        date: Date.now(),
+        date: new Date().toLocaleDateString(),
         comment: event.target.comment.value,
         //image: {userIcon},
       }].sort(function(a, b) {

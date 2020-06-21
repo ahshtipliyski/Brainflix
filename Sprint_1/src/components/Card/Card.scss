@@ -1,0 +1,34 @@
+.card {
+  &__container {
+    display: flex;
+    box-sizing: border-box;
+    margin: 1.5rem 0;
+    width: 18rem;
+  }
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70px;
+    padding-left: 1rem;
+  }
+  &__image {
+    border-radius: 0.25rem;
+  }
+  &__title {
+    font-size: 0.8rem;
+    height: 2rem;
+    width: 9.25rem;
+    margin: 0;
+    font-family: 'Avenir-Bold';
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  &__channel {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+}

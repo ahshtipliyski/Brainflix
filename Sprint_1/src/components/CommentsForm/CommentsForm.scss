@@ -1,0 +1,74 @@
+.comment {
+  padding: 0 1rem 1.5rem 1rem;
+  &__counter {
+    font-size: 1rem;
+    font-family: 'Avenir-Demi';
+    margin: 0 0 2rem 0;
+  }
+  &__form-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input-label {
+    font-size: 0.75rem;
+    color: #afafaf;
+    font-family: 'Avenir-Demi';
+    padding-bottom: 0.5rem;
+  }
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    object-fit: cover;
+    object-position: left;
+    margin: 0.5rem 0 1rem 0;
+    position: absolute;
+    left: 0;
+    top: 1rem;
+  }
+  &__text-container {
+    width: 13.875rem;
+    height: 6rem;
+    font-family: 'Avenir-Regular';
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border: 0.063rem solid #AFAFAF;
+    border-radius: 0.25rem;
+    background-color: #FAFAFA;
+    padding: 0.75rem 1rem;
+    color: #323232;
+    outline: none;
+    box-sizing: border-box;
+    resize: none;
+    &:focus {
+      border: 0.125rem solid #0095FF;
+      box-sizing: border-box;
+      padding: 0.687rem 0.937rem;
+    }
+    &::placeholder {
+      font-size: 0.85rem;
+    }
+  }
+  &__button {
+    margin: 1rem 0 1.5rem 0;
+    width: 13.875rem;
+    height: 3rem;
+    color: #FFFFFF;
+    border: none;
+    background-color:#0095FF;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: 'Avenir-Demi';
+  }
+
+}

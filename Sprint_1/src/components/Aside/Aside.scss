@@ -1,0 +1,21 @@
+.card {
+  padding: 0 1rem;
+  width: 18rem;
+  margin: 0 auto;
+  &__image {
+    width: 120px;
+    height: 70px;
+    object-fit: cover;
+  }
+  &__container:first-of-type {
+    display: none;
+  }
+  &__header {
+    font-size: 0.85rem;
+    color: #afafaf;
+    font-family: 'Avenir-Demi';
+    margin: 0.5rem 0 2rem 0;
+  }
+}
+
+

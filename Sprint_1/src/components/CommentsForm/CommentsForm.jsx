@@ -1,25 +1,32 @@
-import React from 'react'
-//import userIcon from '../../../public/Images/Mohan-muruge.jpg';
-import '../CommentsList/CommentsList.scss';
+import React, {useState} from 'react'
+import '../CommentsForm/CommentsForm.scss';
 
 
-export default function CommentsForm({handleSubmit}) {
-    return (
-      <section>
-        <h3 className="comment__counter">3 Comments</h3>
-        <div className="comment__form-container">
-          <form onSubmit={handleSubmit}>
-            <img src="" alt="User Icon" className="comment__icon"/>    {/* src was => {userIcon} */}
-            <label htmlFor="comment" className="comment__input-label">JOIN THE CONVERSATION</label>
-              <textarea 
-              className="comment__text-container" 
-              name="comment" 
-              rows="10" 
-              cols="50" 
-              placeholder="Add a new comment"></textarea>
-            <button type="submit" className="comment__button">COMMENT</button>
-          </form>
-      </div>
-    </section>
-    )
+function CommentsForm({handleSubmit}) {
+
+  const [count, setCount] = useState(3);
+  const increment = () => {
+    setCount(count +1);
+  };
+
+  return (
+  <section>
+    <h3 className="comment__counter">{count} Comments</h3>
+    <div className="comment__form-container">
+      <form className="comment__form" onSubmit={handleSubmit}>
+        <img src="/Images/Mohan-muruge.jpg" alt="User Icon" className="comment__icon"/>    {/* src was =>  */}
+        <label htmlFor="comment" className="comment__input-label">JOIN THE CONVERSATION</label>
+        <textarea 
+          className="comment__text-container" 
+          name="comment" 
+          rows="10" 
+          cols="50" 
+          placeholder="Add a new comment"></textarea>
+        <button type="submit" className="comment__button" onClick={increment}>COMMENT</button>
+      </form>
+    </div>
+  </section>
+  )
 }
+
+export default CommentsForm;
