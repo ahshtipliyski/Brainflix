@@ -1,3 +1,6 @@
+@import '../../partials/mixins';
+@import '../../partials/variables';
+
 .comment {
   padding: 0 1rem 1.5rem 1rem;
   &__counter {
@@ -13,12 +16,22 @@
   &__form {
     display: flex;
     flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
   }
   &__input-label {
     font-size: 0.75rem;
     color: #afafaf;
     font-family: 'Avenir-Demi';
     padding-bottom: 0.5rem;
+    @include tablet {
+      width: 39rem;
+      margin-right: 2rem;
+      font-size: 0.8rem;
+    }
   }
   &__input-container {
     display: flex;
@@ -35,6 +48,9 @@
     position: absolute;
     left: 0;
     top: 1rem;
+    @include tablet {
+      margin-right: 1rem;
+    }
   }
   &__text-container {
     width: 13.875rem;
@@ -50,6 +66,10 @@
     outline: none;
     box-sizing: border-box;
     resize: none;
+    @include tablet {
+      height: 3rem;
+      width: 27.5rem;
+    }
     &:focus {
       border: 0.125rem solid #0095FF;
       box-sizing: border-box;
@@ -69,6 +89,11 @@
     border-radius: 0.25rem;
     font-size: 0.875rem;
     font-family: 'Avenir-Demi';
+    @include tablet {
+      width: 10rem;
+      margin: 0 2.5rem 1.5rem 1rem;
+      font-size: 0.95rem;
+    }
   }
 
 }

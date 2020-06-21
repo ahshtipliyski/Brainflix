@@ -30,7 +30,7 @@ class Hero extends React.Component {
             <img src={play} className="hero__play" alt="Play Button"/>
             <div className="hero__video-process">
               <div className="hero__progress-bar"></div>
-            <span className="hero__progress-time">0:00 / 0:42</span>
+              <span className="hero__progress-time">0:00 / 0:42</span>
             </div>
             <div className="hero__settings"><img src={fullscreen} alt="Video fullscreen button"/><img src={volume} alt="Volume control button"/></div>
           </div>
