@@ -8,6 +8,34 @@
     width: 100%;
     background-color: black;
     height: 11.438rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  &__controls {
+    width: 20rem;
+    height: 11.438rem;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__progress-time {
+    display: none;
+  }
+  &__play {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 2rem;
+    width: 3.125rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 0.35rem 0.35rem 0.35rem 0.55rem;
+    margin: 0 0.5rem 0.5rem 1rem;
   }
 }
+
+
 
