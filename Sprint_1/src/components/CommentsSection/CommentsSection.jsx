@@ -15,7 +15,7 @@ class CommentsSection extends React.Component {
     event.preventDefault();
     this.setState({comments: [...this.state.comments, {
         id: Date.now(),
-        name: "Mohan Muruge",
+        name: "BrainStation Man",
         date: new Date().toLocaleDateString(),
         comment: event.target.comment.value,
         //image: {userIcon},
