@@ -1,0 +1,10 @@
+@import '../../partials/mixins';
+@import '../../partials/variables';
+
+@include desktop {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

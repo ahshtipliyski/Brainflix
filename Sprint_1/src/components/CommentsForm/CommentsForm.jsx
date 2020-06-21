@@ -21,7 +21,7 @@ function CommentsForm({handleSubmit}) {
           name="comment" 
           rows="10" 
           cols="50" 
-          placeholder="Add a new comment"></textarea>
+          placeholder="Write comment here"></textarea>
         <button type="submit" className="comment__button" onClick={increment}>COMMENT</button>
       </form>
     </div>

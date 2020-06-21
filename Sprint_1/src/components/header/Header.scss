@@ -11,6 +11,9 @@
     justify-content: flex-end;
     padding: 1rem 1.5rem;
   }
+  @include desktop {
+    padding: 1rem 9rem;
+  }
   &__logo-container {
     height: 3rem;
     display: flex;
@@ -51,6 +54,9 @@
     }
     @include tablet {
       width: 15.5rem;
+    }
+    @include desktop {
+      width: 13.75rem;
     }
   }
   &__account {

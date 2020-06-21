@@ -8,6 +8,11 @@
     width: 45rem;
     margin: 0 auto;
   }
+  @include desktop {
+    margin: 0;
+    padding: 1.75rem 0 3rem 0;
+    width: 35.25rem;
+  }
   &__highlight {
     border-bottom: 0.063rem solid #E1E1E1;
     padding-bottom: 0.25rem;
@@ -16,12 +21,18 @@
       flex-wrap: wrap;
       justify-content: space-between;
     }
+    @include desktop {
+      padding: 0;
+    }
   }
   &__header {
     margin: 0;
     font-family: 'Avenir-Bold';
     @include tablet {
       font-size: 2.25rem;
+    }
+    @include desktop {
+      font-size: 1.6rem;
     }
   }
   &__from {
@@ -47,6 +58,9 @@
   &__stats {
     display: flex;
     flex-direction: row;
+    @include desktop {
+      margin-right: 1.6rem;
+    }
   }
   &__views-container {
     display: flex;
@@ -69,6 +83,16 @@
   &__icon {
     padding-right: 0.5rem;
   }
+  &__likes {
+    @include desktop {
+      margin: auto 0;
+    }
+  }
+  &__views {
+    @include desktop {
+      margin: auto 0;
+    }
+  }
   &__text {
     margin: 1.5rem 0 0 0;
     font-size: 0.75rem;
@@ -78,6 +102,12 @@
       font-size: 0.85rem;
       line-height: 1.4rem;
       margin-top: 2.5rem;
+    }
+    @include desktop {
+      width: 26rem;
+      font-size: 0.713rem;
+      line-height: 1.2rem;
+      margin-top: 2rem;
     }
   }
 }

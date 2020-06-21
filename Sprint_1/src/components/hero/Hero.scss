@@ -4,7 +4,10 @@
 .hero {
   @include tablet {
     height: 25rem;
-  }  
+  } 
+  @include desktop {
+    height: 27rem;
+  } 
   &__video {
     width: 100%;
     height: 11.438rem;
@@ -12,6 +15,10 @@
       height: 25rem;
       width: 43.75rem;
       object-fit: cover;
+    }
+    @include desktop {
+      height: 27rem;
+      width: 48.1rem;
     }  
   }
   &__background {
@@ -23,6 +30,9 @@
     justify-content: center;
     @include tablet {
       height: 25rem;
+    }  
+    @include desktop {
+      height: 27rem;
     }  
   }
   &__controls {
@@ -37,6 +47,10 @@
       height: 25rem;
       width: 43.75rem;
     }  
+    @include desktop {
+      height: 27rem;
+      width: 48.1rem;
+    }  
   }
   &__play {
     border-radius: 0.25rem;
@@ -50,6 +64,9 @@
     margin: 0 0.5rem 0.5rem 1rem;
     @include tablet {
       margin: 0 1rem 1rem 0.5rem;
+    }
+    @include desktop {
+      margin-left: 1rem;
     }
   }
   &__video-process {
@@ -67,6 +84,9 @@
       width: 32.438rem;
       margin: 0 0 1rem 0;
     }
+    @include desktop {
+      width: 37.438rem;
+    }
   }
   &__progress-bar {
     width: 79%;
@@ -76,6 +96,9 @@
     border-radius: 0.313rem;
     @include tablet {
       margin: auto 1rem;
+    }
+    @include desktop {
+      width: 81%;
     }
   }
   &__progress-time {
@@ -99,6 +122,9 @@
     margin: 0 1rem 0.5rem 0.5rem;
     @include tablet {
       margin: 0 0.5rem 1rem 1rem;
+    }
+    @include desktop {
+      margin-right: 1rem;
     }
   }
 }
