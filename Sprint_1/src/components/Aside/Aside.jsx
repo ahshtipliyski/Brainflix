@@ -30,10 +30,3 @@ class Aside extends React.Component {
 
 
 export default Aside;
-
-
-// { this.state.cards.map(card => 
-//   <div key={card.id}>
-//     <img className="card__image" src={card.image}/>
-//   </div>
-// )}

@@ -14,7 +14,7 @@ function Header() {
       </div>
       <div className="nav-bar__account">
         <button className="nav-bar__upload-button"><span className="nav-bar__plus">+</span> UPLOAD</button>
-        <img src="/Images/Mohan-muruge.jpg" alt="User Icon" className="nav-bar__icon"/>   {/*  src={userIcon} */}
+        <img src="/Images/Mohan-muruge.jpg" alt="User Icon" className="nav-bar__icon"/> 
       </div>
     </nav>
   );

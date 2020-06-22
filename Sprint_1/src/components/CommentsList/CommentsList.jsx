@@ -8,7 +8,7 @@ export default function CommentsList({comments}) {
         <div className="comment__comments-container">
             {comments.map(input => 
             <div className="comment__each-comment" key={input.id}>
-              <div className="comment__image"></div>   {/* try to post with mohan image */}
+              <div className="comment__image"></div> 
               <div className="comment__inputs">
                 <div className="comment__top-inputs">
                   <h3 className="comment__name">{input.name}</h3>

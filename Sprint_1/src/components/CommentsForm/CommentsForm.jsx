@@ -14,7 +14,7 @@ function CommentsForm({handleSubmit}) {
     <h3 className="comment__counter">{count} Comments</h3>
     <div className="comment__form-container">
       <form className="comment__form" onSubmit={handleSubmit}>
-        <img src="/Images/Mohan-muruge.jpg" alt="User Icon" className="comment__icon"/>    {/* src was =>  */}
+        <img src="/Images/Mohan-muruge.jpg" alt="User Icon" className="comment__icon"/>  
         <label htmlFor="comment" className="comment__input-label">JOIN THE CONVERSATION</label>
         <textarea 
           className="comment__text-container" 

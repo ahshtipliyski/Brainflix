@@ -3,9 +3,6 @@ import axios from 'axios';
 import CommentsForm from '../../components/CommentsForm/CommentsForm';
 import CommentsList from '../../components/CommentsList/CommentsList';
 
-//import userIcon from '../../assets/Images/Mohan-muruge.jpg';
-
-
 class CommentsSection extends React.Component {
   state = {
     comments: []
@@ -18,7 +15,6 @@ class CommentsSection extends React.Component {
         name: "BrainStation Man",
         date: new Date().toLocaleDateString(),
         comment: event.target.comment.value,
-        //image: {userIcon},
       }].sort(function(a, b) {
         return b.id - a.id
       })
