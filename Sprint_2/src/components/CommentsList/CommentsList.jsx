@@ -31,7 +31,7 @@ class CommentsList extends React.Component {
   render () {
     let {name, timestamp, comment} = this.props
     return (
-        <div className="comment__comments-container">
+        // <div className="comment__comments-container">
             <div className="comment__each-comment">               
               <div className="comment__image"></div> 
               <div className="comment__inputs">
@@ -42,7 +42,7 @@ class CommentsList extends React.Component {
                 <p className="comment__text">{comment}</p>
               </div>
             </div>  
-        </div>
+        // </div>
     )
   }
 }

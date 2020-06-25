@@ -3,12 +3,11 @@ import '../Main/Main.scss';
 import axios from 'axios';
 import Hero from '../Hero/Hero';
 import About from '../About/About';
-// import CommentsSection from '../CommentsSection/CommentsSection';
-// import Aside from '../Aside/Aside';
+import Aside from '../Aside/Aside';
 
 
 const API_URL = `https://project-2-api.herokuapp.com`;
-const API_KEY = 'cd25c4af-ce42-4a99-87d2-99516501b1b3';
+const API_KEY = '629308dd-9f99-4639-90a7-a06e4fcae511';
 const MAIN_VIDEO = '1af0jruup5gu'
 
 class Main extends React.Component {
@@ -43,13 +42,13 @@ class Main extends React.Component {
   commentHandler = (event) => {
     let dynamicURL = this.props.match.params.id
     event.preventDefault();
-    let note = event.target.inputValue.value;
+    let note = event.target.comment.value;
 
     if (typeof dynamicURL === "undefined") {
       dynamicURL = '1af0jruup5gu'}
     axios 
       .post(`${API_URL}/videos/${dynamicURL}/comments?api_key=${API_KEY}`, {
-        "comment" : event.target.inputValue.value,
+        "comment" : event.target.comment.value,
         "name" : "Brainstation Man"
       })
       .then(() => {
@@ -65,9 +64,8 @@ class Main extends React.Component {
       <section className="main"> 
         <div className="main__comments">
           <About mainVideoDetails={this.state.mainVideo} commentHandler={this.commentHandler} />
-          {/* <CommentsSection /> */}
         </div>
-        {/* <Aside/> */}
+        <Aside/>
       </section>
       </>
     )

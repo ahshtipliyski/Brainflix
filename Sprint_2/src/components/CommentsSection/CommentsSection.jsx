@@ -1,39 +1,34 @@
-// import React from 'react';
-// import axios from 'axios';
-// //import CommentsForm from '../../components/CommentsForm/CommentsForm';
-// import CommentsList from '../../components/CommentsList/CommentsList';
+// import React from 'react'
+// import '../CommentsForm/CommentsForm.scss';
+// import '../CommentsList/CommentsList.scss';
+// import { v4 as uuidv4 } from 'uuid';
 
-// class CommentsSection extends React.Component {
-//   state = {
-//     comments: []
-//   }
 
-//   handleSubmit = (event) => {
-//     event.preventDefault();
-//     this.setState({comments: [...this.state.comments, {
-//         id: Date.now(),
-//         name: "BrainStation Man",
-//         date: new Date().toLocaleDateString(),
-//         comment: event.target.comment.value,
-//       }].sort(function(a, b) {
-//         return b.id - a.id
-//       })
-//     })
-//     event.target.reset();
-//   }
-//   componentDidMount() {
-//     axios.get('/data.json')
-//     .then(res => this.setState({comments: res.data[0].comments}))
-//   }
-  
-//   render() {
-//     return (
-//       <div className="comment">
-//         {/* <CommentsForm handleSubmit={this.handleSubmit}/> */}
-//         <CommentsList comments={this.state.comments}/>
-//       </div>
-//     );
-//   }
+// function CommentsSection(props) {
+//   return (
+//     <div className="comment">
+//     <h3 className="comment__counter">{props.mainVideoDetails.comments.length} Comments</h3>
+//     <div className="comment__form-container">
+//       <form className="comment__form" onSubmit={props.commentHandler}>
+//         <img src="/Images/Mohan-muruge.jpg" alt="User Icon" className="comment__icon"/>  
+//         <label htmlFor="comment" className="comment__input-label">JOIN THE CONVERSATION</label>
+//         <textarea 
+//           className="comment__text-container" 
+//           name="comment" 
+//           rows="10" 
+//           cols="50" 
+//           placeholder="Write comment here"></textarea>
+//         <button type="submit" className="comment__button">COMMENT</button>
+//       </form>
+//     </div>
+
+//     <div>{
+//       props.mainVideoDetails.comments.map((commentArray)=>
+//       <CommentsList key={uuidv4()} name={commentArray.name} timestamp={commentArray.timestamp} comment={commentArray.comment} />
+//       ).reverse()
+//     }
+//     </div>
+//   </div>
+//   )
 // }
-
 // export default CommentsSection;

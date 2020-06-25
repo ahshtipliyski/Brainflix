@@ -1,10 +1,11 @@
 import React from 'react';
-import CommentsList from '../CommentsList/CommentsList'
+import CommentsList from '../CommentsList/CommentsList';
 import '../../App.scss';
 import '../About/About.scss';
-import '../CommentsForm/CommentsForm.scss'
+import '../CommentsForm/CommentsForm.scss';
 import viewsIcon from '../../assets/Icons/SVG/Icon-views.svg';
 import likesIcon from '../../assets/Icons/SVG/Icon-likes.svg';
+import { v4 as uuidv4 } from 'uuid';
 
 const dynamicTimestamp = (timeStampFromApi) => {
   let seconds = Math.floor((new Date() - timeStampFromApi) / 1000);
@@ -32,7 +33,6 @@ const dynamicTimestamp = (timeStampFromApi) => {
 }
 
 function About (props) {
-
   return (
     <>
     <div className="about">
@@ -57,38 +57,29 @@ function About (props) {
         <p className="about__text">{props.mainVideoDetails.description}</p>
       </div>
     </div>
-
-
-
-      <h3 className="comment__counter">{props.mainVideoDetails.comments.length} Comments</h3>
-      <div className="comment__form-container">
-        <form className="comment__form" onSubmit={props.commentHandler}>
-          <img src="/Images/Mohan-muruge.jpg" alt="User Icon" className="comment__icon"/>  
-          <label htmlFor="comment" className="comment__input-label">JOIN THE CONVERSATION</label>
-          <textarea 
-            className="comment__text-container" 
-            name="comment" 
-            rows="10" 
-            cols="50" 
-            placeholder="Write comment here"></textarea>
-          <button type="submit" className="comment__button">COMMENT</button>
-        </form>
-      </div>
-  
+    <div className="comment">
+    <h3 className="comment__counter">{props.mainVideoDetails.comments.length} Comments</h3>
+    <div className="comment__form-container">
+      <form className="comment__form" onSubmit={props.commentHandler}>
+        <img src="/Images/Mohan-muruge.jpg" alt="User Icon" className="comment__icon"/>  
+        <label htmlFor="comment" className="comment__input-label">JOIN THE CONVERSATION</label>
+        <textarea 
+          className="comment__text-container" 
+          name="comment" 
+          rows="10" 
+          cols="50" 
+          placeholder="Write comment here"></textarea>
+        <button type="submit" className="comment__button">COMMENT</button>
+      </form>
+    </div>
 
     <div>{
-            props.mainVideoDetails.comments.map((commentArray, index)=>
-            <CommentsList 
-              key={index}
-              name={commentArray.name}
-              timestamp={commentArray.timestamp}
-              comment={commentArray.comment}
-
-            />
-            ).reverse()
-          }
-          </div>
-
+      props.mainVideoDetails.comments.map((commentArray)=>
+      <CommentsList key={uuidv4()} name={commentArray.name} timestamp={commentArray.timestamp} comment={commentArray.comment} />
+      ).reverse()
+    }
+    </div>
+  </div>
     </>
   );
   
