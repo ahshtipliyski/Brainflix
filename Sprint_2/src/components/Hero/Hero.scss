@@ -9,12 +9,12 @@
     height: 27rem;
   } 
   &__video {
-    width: 100%;
+    width: 20rem;
     height: 11.438rem;
+    object-fit: cover;
     @include tablet {
       height: 25rem;
       width: 43.75rem;
-      object-fit: cover;
     }
     @include desktop {
       height: 27rem;
@@ -96,6 +96,7 @@
     border-radius: 0.313rem;
     @include tablet {
       margin: auto 1rem;
+      width: 77%;
     }
     @include desktop {
       width: 80%;

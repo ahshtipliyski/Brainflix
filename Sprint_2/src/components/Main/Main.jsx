@@ -18,7 +18,7 @@ class Main extends React.Component {
     asideVideos: [],
   }
 
-  firstMount = () => {
+  firstMount() {
     axios
     .get(`${url}/videos/${MAIN_VIDEO}?api_key=${API_KEY}`)
     .then(response => {
@@ -26,12 +26,18 @@ class Main extends React.Component {
         mainVideo: response.data,
       });
     })
+    .catch(error => {
+      console.log(error)
+    }) 
     axios
     .get(`${url}/videos/?api_key=${API_KEY}`)
     .then(response => {
       this.setState({
         asideVideos: response.data,
       });
+    })
+    .catch(error => {
+      console.log(error)
     })  
   }
 
@@ -53,7 +59,10 @@ class Main extends React.Component {
           mainVideo: response.data,
         });
       }   
-    })  
+    })
+    .catch(error => {
+      console.log(error)
+    })   
   }
 
 

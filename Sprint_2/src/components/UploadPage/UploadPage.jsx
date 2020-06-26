@@ -13,13 +13,15 @@ function UploadPage() {
           </div>
           <div className="upload__right-container">
             <label htmlFor="video-title"><h2 className="upload__sub-header">TITLE YOUR VIDEO</h2></label>
-            <input type="text" placeholder="Add a title to your video" name="video-title" class="upload__input" />
+            <input type="text" placeholder="Add a title to your video" name="video-title" className="upload__input" />
             <label htmlFor="video-description"><h2 className="upload__sub-header">ADD A VIDEO DESCRIPTION</h2></label>
             <textarea name="vide-description" cols="30" rows="10" className="upload__description" placeholder="Add a description of your video"></textarea>
           </div>
         </div>
-        <button className="upload__publish-button">PUBLISH</button>
-        <button className="upload__cancel-button">CANCEL</button>
+        <div className="upload__buttons-container">
+          <button className="upload__publish-button">PUBLISH</button>
+          <button className="upload__cancel-button">CANCEL</button>
+        </div>
       </form>
     </div>
   )
