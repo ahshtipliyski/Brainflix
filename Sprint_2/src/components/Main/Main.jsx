@@ -30,7 +30,7 @@ class Main extends React.Component {
     .get(`${API_URL}/videos/?api_key=${API_KEY}`)
     .then(response => {
       this.setState({
-        aside: response.data
+        aside: response.data,
       });
     })  
   }
@@ -42,8 +42,7 @@ class Main extends React.Component {
   commentHandler = (event) => {
     let dynamicURL = this.props.match.params.id
     event.preventDefault();
-    let note = event.target.comment.value;
-
+  
     if (typeof dynamicURL === "undefined") {
       dynamicURL = '1af0jruup5gu'}
     axios 
@@ -65,7 +64,7 @@ class Main extends React.Component {
         <div className="main__comments">
           <About mainVideoDetails={this.state.mainVideo} commentHandler={this.commentHandler} />
         </div>
-        <Aside/>
+        <Aside nextVideos={this.state.aside.filter(data => data.id !== this.state.mainVideo.id)}/>
       </section>
       </>
     )

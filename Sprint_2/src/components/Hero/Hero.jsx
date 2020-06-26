@@ -10,7 +10,7 @@ function Hero(props) {
       <section className="hero">
         <div className="hero__background">
           <video // controls
-            src={props.videoSample} 
+            //src={props.videoSample} 
             type="video/mp4" 
             poster={props.poster}
             className="hero__video">

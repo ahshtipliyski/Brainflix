@@ -9,7 +9,7 @@ function Header() {
   
   return (
     <nav className="nav-bar">
-      <Link to="/" className="nav-bar__logo-container"><a href="#"><img src={logo} alt="Brainflix logo" className="nav-bar__logo"/></a></Link>
+      <Link to="/" className="nav-bar__logo-container"><img src={logo} alt="Brainflix logo" className="nav-bar__logo"/></Link>
       <div className="nav-bar__input-container">
         <input type="text" className="nav-bar__input" placeholder= "      Search" />
       </div>
