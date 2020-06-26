@@ -6,31 +6,31 @@ import About from '../About/About';
 import Aside from '../Aside/Aside';
 
 
-const API_URL = `https://project-2-api.herokuapp.com`;
+const url = `https://project-2-api.herokuapp.com`;
 const API_KEY = '629308dd-9f99-4639-90a7-a06e4fcae511';
-const MAIN_VIDEO = '1af0jruup5gu'
+const MAIN_VIDEO = '1af0jruup5gu';
 
 class Main extends React.Component {
   state = {
     mainVideo: {
       comments: []
     },
-    aside: [],
+    asideVideos: [],
   }
 
   firstMount = () => {
     axios
-    .get(`${API_URL}/videos/${MAIN_VIDEO}?api_key=${API_KEY}`)
+    .get(`${url}/videos/${MAIN_VIDEO}?api_key=${API_KEY}`)
     .then(response => {
       this.setState({
         mainVideo: response.data,
       });
     })
     axios
-    .get(`${API_URL}/videos/?api_key=${API_KEY}`)
+    .get(`${url}/videos/?api_key=${API_KEY}`)
     .then(response => {
       this.setState({
-        aside: response.data,
+        asideVideos: response.data,
       });
     })  
   }
@@ -39,6 +39,25 @@ class Main extends React.Component {
     this.firstMount();
   }
 
+  componentDidUpdate() {      
+    let dynamicURL = this.props.match.params.id
+    // console.log(this.props)
+    if (typeof this.props.match.params.id === "undefined") {
+      dynamicURL = '1af0jruup5gu'}
+    axios
+    .get(`${url}/videos/${dynamicURL}?api_key=${API_KEY}`)
+    .then(response => {
+    // console.log(response)
+      if (this.state.mainVideo.id !== response.data.id) {
+        this.setState({
+          mainVideo: response.data,
+        });
+      }   
+    })  
+  }
+
+
+
   commentHandler = (event) => {
     let dynamicURL = this.props.match.params.id
     event.preventDefault();
@@ -46,7 +65,7 @@ class Main extends React.Component {
     if (typeof dynamicURL === "undefined") {
       dynamicURL = '1af0jruup5gu'}
     axios 
-      .post(`${API_URL}/videos/${dynamicURL}/comments?api_key=${API_KEY}`, {
+      .post(`${url}/videos/${dynamicURL}/comments?api_key=${API_KEY}`, {
         "comment" : event.target.comment.value,
         "name" : "Brainstation Man"
       })
@@ -64,7 +83,7 @@ class Main extends React.Component {
         <div className="main__comments">
           <About mainVideoDetails={this.state.mainVideo} commentHandler={this.commentHandler} />
         </div>
-        <Aside nextVideos={this.state.aside.filter(data => data.id !== this.state.mainVideo.id)}/>
+        <Aside nextVideos={this.state.asideVideos.filter(data => data.id !== this.state.mainVideo.id)}/>
       </section>
       </>
     )

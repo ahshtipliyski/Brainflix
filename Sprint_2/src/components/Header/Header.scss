@@ -27,7 +27,7 @@
     display: flex;
     justify-content: center;
     @include tablet {
-      width: 7.5rem;
+      width: 8.5rem;
     }
   }
   &__input {
@@ -64,7 +64,7 @@
     flex-direction: row;
   }
   &__upload-button {
-    width: 13.875rem;
+    width: 14rem;
     height: 3rem;
     margin: 0.5rem 1rem 1rem 0;
     text-decoration: none;
@@ -92,7 +92,6 @@
     box-sizing: border-box;
     font-family: 'Avenir-Regular';
     display: flex;
-    padding-bottom: 0.313rem;
     padding-right: 0.5rem;
     @include tablet {
 

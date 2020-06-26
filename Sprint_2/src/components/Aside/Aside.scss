@@ -5,6 +5,10 @@
   padding: 0 1rem;
   width: 18rem;
   margin: 0 auto;
+  &__anchor {
+    text-decoration: none;
+    color: #323232;
+  }
   @include tablet {
     width: 21.75rem;
     padding: 0 1.5rem;
