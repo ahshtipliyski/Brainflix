@@ -47,13 +47,13 @@ class Main extends React.Component {
 
   componentDidUpdate() {      
     let dynamicURL = this.props.match.params.id
-    // console.log(this.props)
+    //console.log(this.props.match)
     if (typeof this.props.match.params.id === "undefined") {
       dynamicURL = '1af0jruup5gu'}
     axios
     .get(`${url}/videos/${dynamicURL}?api_key=${API_KEY}`)
     .then(response => {
-    // console.log(response)
+    //console.log(response)
       if (this.state.mainVideo.id !== response.data.id) {
         this.setState({
           mainVideo: response.data,

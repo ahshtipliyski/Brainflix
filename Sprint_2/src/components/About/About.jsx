@@ -7,8 +7,8 @@ import viewsIcon from '../../assets/Icons/SVG/Icon-views.svg';
 import likesIcon from '../../assets/Icons/SVG/Icon-likes.svg';
 import { v4 as uuidv4 } from 'uuid';
 
-const dynamicTimestamp = (timeStampFromApi) => {
-  let seconds = Math.floor((new Date() - timeStampFromApi) / 1000);
+const dynamicTimestamp = (timeStamp) => {
+  let seconds = Math.floor((new Date() - timeStamp) / 1000);
   let interval = Math.floor(seconds / 31536000);
   if (interval > 1) {
     return interval + " years ago";

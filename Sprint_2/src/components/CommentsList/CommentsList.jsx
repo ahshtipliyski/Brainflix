@@ -2,8 +2,8 @@ import React from 'react';
 import '../../App.scss';
 import '../CommentsList/CommentsList.scss'
 
-const timeConverter = (timeStampFromApi) => {
-  let seconds = Math.floor((new Date() - timeStampFromApi) / 1000);
+const timeConverter = (timeStamp) => {
+  let seconds = Math.floor((new Date() - timeStamp) / 1000);
   let interval = Math.floor(seconds / 31536000);
   if (interval > 1) {
     return interval + " years ago";

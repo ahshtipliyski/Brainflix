@@ -145,6 +145,12 @@
     @include tablet {
       width: 10rem;
     }
+    @include desktop {
+      &:hover {
+        background-color: #1572B8;
+        cursor: pointer;
+      }
+    }
   }
   &__cancel-button {
     width: 100%;
@@ -157,6 +163,12 @@
     font-family: 'Avenir-Demi';
     @include tablet {
       width: 10rem;
+    }
+    @include desktop {
+      &:hover {
+        cursor: pointer;
+        color: #1572B8;
+      }
     }
   }
 }
