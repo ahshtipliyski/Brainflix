@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import UploadPage from './components/UploadPage/UploadPage';
+import Header from './Comps/Header/Header';
+import Main from './Comps/Main/Main';
+import UploadPage from './Comps/UploadPage/UploadPage';
 import './App.scss';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 

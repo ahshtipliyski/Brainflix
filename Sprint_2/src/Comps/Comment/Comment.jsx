@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.scss';
-import '../Comment/Comment.scss'
+import './Comment.scss'
 
 const timeConverter = (timeStamp) => {
   let seconds = Math.floor((new Date() - timeStamp) / 1000);
@@ -31,18 +31,16 @@ class Comment extends React.Component {
   render () {
     let {name, timestamp, comment} = this.props
     return (
-        // <div className="comment__comments-container">
-            <div className="comment__each-comment">               
-              <div className="comment__image"></div> 
-              <div className="comment__inputs">
-                <div className="comment__top-inputs">
-                  <h3 className="comment__name">{name}</h3>
-                  <p className="comment__date">{timeConverter(timestamp)}</p>
-                </div>
-                <p className="comment__text">{comment}</p>
-              </div>
-            </div>  
-        // </div>
+      <div className="comment__each-comment">               
+        <div className="comment__image"></div> 
+        <div className="comment__inputs">
+          <div className="comment__top-inputs">
+            <h3 className="comment__name">{name}</h3>
+            <p className="comment__date">{timeConverter(timestamp)}</p>
+          </div>
+          <p className="comment__text">{comment}</p>
+        </div>
+      </div>  
     )
   }
 }

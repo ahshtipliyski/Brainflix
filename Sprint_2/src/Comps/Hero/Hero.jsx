@@ -1,5 +1,5 @@
 import React from "react";
-import '../Hero/Hero.scss';
+import './Hero.scss';
 import play from '../../assets/Icons/SVG/Icon-play.svg';
 import fullscreen from '../../assets/Icons/SVG/Icon-fullscreen.svg';
 import volume from '../../assets/Icons/SVG/Icon-volume.svg';
