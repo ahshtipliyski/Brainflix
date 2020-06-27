@@ -5,10 +5,7 @@ import logo from '../../assets/Logo/Logo-brainflix.svg';
 import upload from '../../assets/Icons/SVG/Icon-upload.svg';
 import {Link} from 'react-router-dom';
 
-
-
 function Header() {
-  
   return (
     <nav className="nav-bar">
       <Link to="/" className="nav-bar__logo-container"><img src={logo} alt="Brainflix logo" className="nav-bar__logo"/></Link>

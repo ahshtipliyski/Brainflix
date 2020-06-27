@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.scss';
-import '../CommentsList/CommentsList.scss'
+import '../Comment/Comment.scss'
 
 const timeConverter = (timeStamp) => {
   let seconds = Math.floor((new Date() - timeStamp) / 1000);
@@ -27,7 +27,7 @@ const timeConverter = (timeStamp) => {
   return Math.floor(seconds) + " seconds ago";
 }
 
-class CommentsList extends React.Component {
+class Comment extends React.Component {
   render () {
     let {name, timestamp, comment} = this.props
     return (
@@ -47,5 +47,4 @@ class CommentsList extends React.Component {
   }
 }
 
-
-export default CommentsList;
+export default Comment;

@@ -18,7 +18,8 @@ class Main extends React.Component {
     asideVideos: [],
   }
 
-  firstMount() {
+  //getting information for main video and side videos
+  initialMount() {
     axios
     .get(`${url}/videos/${MAIN_VIDEO}?api_key=${API_KEY}`)
     .then(response => {
@@ -42,18 +43,17 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    this.firstMount();
+    this.initialMount();
   }
 
+  //dynamic url changing on update
   componentDidUpdate() {      
     let dynamicURL = this.props.match.params.id
-    //console.log(this.props.match)
     if (typeof this.props.match.params.id === "undefined") {
       dynamicURL = '1af0jruup5gu'}
     axios
     .get(`${url}/videos/${dynamicURL}?api_key=${API_KEY}`)
     .then(response => {
-    //console.log(response)
       if (this.state.mainVideo.id !== response.data.id) {
         this.setState({
           mainVideo: response.data,
@@ -65,8 +65,7 @@ class Main extends React.Component {
     })   
   }
 
-
-
+  //post comment
   commentHandler = (event) => {
     let dynamicURL = this.props.match.params.id
     event.preventDefault();
@@ -74,14 +73,14 @@ class Main extends React.Component {
     if (typeof dynamicURL === "undefined") {
       dynamicURL = '1af0jruup5gu'}
     axios 
-      .post(`${url}/videos/${dynamicURL}/comments?api_key=${API_KEY}`, {
-        "comment" : event.target.comment.value,
-        "name" : "Brainstation Man"
-      })
-      .then(() => {
-        this.firstMount();
-      }) 
-      event.target.reset();
+    .post(`${url}/videos/${dynamicURL}/comments?api_key=${API_KEY}`, {
+      "comment" : event.target.comment.value,
+      "name" : "Brainstation Man"
+    })
+    .then(() => {
+      this.initialMount();
+    }) 
+    event.target.reset();
   }
 
   render() {

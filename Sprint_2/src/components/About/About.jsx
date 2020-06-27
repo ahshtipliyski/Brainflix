@@ -1,11 +1,10 @@
 import React from 'react';
-import CommentsList from '../CommentsList/CommentsList';
-import '../../App.scss';
+import { v4 as uuidv4 } from 'uuid';
+import Comment from '../Comment/Comment';
 import '../About/About.scss';
-import '../CommentsForm/CommentsForm.scss';
 import viewsIcon from '../../assets/Icons/SVG/Icon-views.svg';
 import likesIcon from '../../assets/Icons/SVG/Icon-likes.svg';
-import { v4 as uuidv4 } from 'uuid';
+
 
 const dynamicTimestamp = (timeStamp) => {
   let seconds = Math.floor((new Date() - timeStamp) / 1000);
@@ -75,7 +74,7 @@ function About (props) {
 
     <div>{
       props.mainVideoDetails.comments.map((commentArray)=>
-      <CommentsList key={uuidv4()} name={commentArray.name} timestamp={commentArray.timestamp} comment={commentArray.comment} />
+      <Comment key={uuidv4()} name={commentArray.name} timestamp={commentArray.timestamp} comment={commentArray.comment} />
       ).reverse()
     }
     </div>

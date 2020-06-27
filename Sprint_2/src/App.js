@@ -12,9 +12,9 @@ function App() {
       <Router>
         <Header />
         <Switch>
-         <Route path="/" exact component={Main} />
-         <Route path="/upload" exact component={UploadPage} />
-         <Route path="/:id" exact component={Main} />
+          <Route path="/" exact component={Main} />
+          <Route path="/upload" exact component={UploadPage} />
+          <Route path="/:id" exact component={Main} />
         </Switch>
       </Router>
     </div>
