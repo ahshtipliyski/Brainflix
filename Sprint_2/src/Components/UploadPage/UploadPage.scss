@@ -3,7 +3,7 @@
 
 .upload {
   padding: 0 1rem;
-  border-top: 0.063rem solid #E1E1E1;
+  border-top: 0.063rem solid $secondary-color;
   display: flex;
   flex-direction: column;
   @include tablet {
@@ -20,14 +20,14 @@
     @include tablet {
       font-size: 2.25rem;
       padding: 2.5rem 0 2rem 0;
-      border-bottom: 0.063rem solid #E1E1E1;
+      border-bottom: 0.063rem solid $secondary-color;
       margin-bottom: 1.75rem;
     }
   }
   &__container {
     @include desktop {
       display: flex;
-      border-bottom: 0.063rem solid #E1E1E1;
+      border-bottom: 0.063rem solid $secondary-color;
       margin-bottom: 2rem;
     }
   }
@@ -52,7 +52,7 @@
     display: flex;
     flex-direction: column;
     @include tablet {
-      border-bottom: 0.063rem solid #E1E1E1;
+      border-bottom: 0.063rem solid $secondary-color;
       margin-bottom: 2rem;
     }
     @include desktop {
@@ -66,22 +66,17 @@
     height: 3rem;
     width: 100%;
     font-size: 0.875rem;
-    border: 0.063rem solid #E1E1E1;
-    border-radius: 0.25rem;
-    background-color: #FAFAFA;
     padding-left: 0.75rem;
     margin-bottom: 0.5rem;
-    color: #323232;
-    outline: none;
-    box-sizing: border-box;
+    @include input-style;
     &:focus {
-      border: 0.125rem solid #0095FF;
+      border: 0.125rem solid $accent-color;
       box-sizing: border-box;
       padding-left: 0.687rem;
     }
     &::placeholder {
       font-size: 0.85rem;
-      color: #323232;
+      color: $primary-color;
     }
     @include tablet {
       margin-bottom: 0.75rem;
@@ -96,23 +91,18 @@
     font-family: 'Avenir-Regular';
     font-size: 0.875rem;
     line-height: 1.25rem;
-    border: 0.063rem solid #E1E1E1;
-    border-radius: 0.25rem;
-    background-color: #FAFAFA;
     padding: 0.75rem 1rem;
     margin-bottom: 1.35rem;
-    color: #323232;
-    outline: none;
-    box-sizing: border-box;
     resize: none;
+    @include input-style;
     &:focus {
-      border: 0.125rem solid #0095FF;
+      border: 0.125rem solid $accent-color;
       box-sizing: border-box;
       padding: 0.687rem 0.937rem;
     }
     &::placeholder {
       font-size: 0.85rem;
-      color: #323232;
+      color: $primary-color;
     }
     @include tablet {
       margin-bottom: 2.5rem;
@@ -134,20 +124,15 @@
   &__publish-button {
     width: 100%;
     height: 3rem;
-    border: none;
     margin: 0.5rem 0;
-    text-decoration: none;
-    color: #FFFFFF;
-    background-color:#0095FF;
-    border-radius: 0.25rem;
     font-size: 0.875rem;
-    font-family: 'Avenir-Demi';
+    @include button-style;
     @include tablet {
       width: 10rem;
     }
     @include desktop {
       &:hover {
-        background-color: #1572B8;
+        background-color: $hover-color;
         cursor: pointer;
       }
     }
@@ -157,7 +142,7 @@
     height: 3rem;
     border: none;
     background-color: transparent;
-    color: #0095FF;
+    color: $accent-color;
     margin-bottom: 0.5rem;
     font-size: 0.875rem;
     font-family: 'Avenir-Demi';
@@ -167,7 +152,7 @@
     @include desktop {
       &:hover {
         cursor: pointer;
-        color: #1572B8;
+        color: $hover-color;
       }
     }
   }
