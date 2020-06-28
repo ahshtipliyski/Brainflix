@@ -18,7 +18,7 @@ class Main extends React.Component {
     asideVideos: [],
   }
 
-  //getting information for main video and side videos
+  //getting information from API for main video and side videos
   initialMount() {
     axios
     .get(`${url}/videos/${MAIN_VIDEO}?api_key=${API_KEY}`)
@@ -79,19 +79,28 @@ class Main extends React.Component {
     })
     .then(() => {
       this.initialMount();
-    }) 
+    })
+    .catch(error => {
+      console.log(error)
+    })  
     event.target.reset();
   }
 
   render() {
     return (
       <>
-      <Hero poster={this.state.mainVideo.image} videoSample={this.state.mainVideo.video} duration={this.state.mainVideo.duration} />
+      <Hero 
+        poster={this.state.mainVideo.image} 
+        videoSample={this.state.mainVideo.video} 
+        duration={this.state.mainVideo.duration} />
       <section className="main"> 
         <div className="main__comments">
-          <About mainVideoDetails={this.state.mainVideo} commentHandler={this.commentHandler} />
+          <About 
+            mainVideoDetails={this.state.mainVideo} 
+            commentHandler={this.commentHandler} />
         </div>
-        <Aside nextVideos={this.state.asideVideos.filter(data => data.id !== this.state.mainVideo.id)}/>
+        <Aside 
+          nextVideos={this.state.asideVideos.filter(data => data.id !== this.state.mainVideo.id)}/>
       </section>
       </>
     )
