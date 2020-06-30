@@ -1,0 +1,114 @@
+@import '../../partials/mixins';
+@import '../../partials/variables';
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0 1rem;
+  @include tablet {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 1rem 1.5rem;
+  }
+  @include desktop {
+    padding: 1rem 9rem;
+  }
+  &__logo-container {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    @include tablet {
+     margin-right: auto; 
+    }
+  }
+  &__logo {
+    height: 1.7rem;
+    display: flex;
+    justify-content: center;
+    @include tablet {
+      width: 8.5rem;
+    }
+  }
+
+  &__input-container {
+    @include tablet {
+      width: 15.5rem;
+    }
+    @include desktop {
+      width: 13.75rem;
+    }
+  }
+
+  &__input {
+    height: 3rem;
+    width: 18rem;
+    font-size: 1rem;
+    padding-left: 0.75rem;
+    @include input-style;
+    &:focus {
+      border: 0.125rem solid $accent-color;
+      box-sizing: border-box;
+      padding-left: 0.687rem;
+    }
+    &::placeholder {
+      background-image: url('../../assets/Icons/SVG/Icon-search.svg');
+      background-repeat: no-repeat;
+      color: $primary-color;
+      font-size: 1rem;
+    }
+    @include tablet {
+      width: 15.5rem;
+    }
+    @include desktop {
+      width: 13.75rem;
+    }
+  }
+  &__account {
+    display: flex;
+    flex-direction: row;
+  }
+  &__upload-button {
+    width: 14rem;
+    height: 3rem;
+    margin: 0.5rem 1rem 1rem 0;
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include button-style;
+    @include tablet {
+      width: 7rem;
+      margin: auto 1.5rem;
+    }
+    @include desktop {
+      &:hover {
+        background-color: $hover-color;
+        cursor: pointer;
+      }
+    }
+  }
+  &__plus {
+    font-size: 1.7rem;
+    box-sizing: border-box;
+    font-family: 'Avenir-Regular';
+    display: flex;
+    padding-right: 0.5rem;
+    @include tablet {
+
+    }
+  }
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    object-fit: cover;
+    object-position: left;
+    margin: 0.5rem 0 1rem 0;
+    @include tablet {
+      margin: auto 0;
+    }
+  }
+}
+
