@@ -6,8 +6,8 @@ import About from '../About/About';
 import Aside from '../Aside/Aside';
 
 
-const url = `https://project-2-api.herokuapp.com`;
-const API_KEY = '629308dd-9f99-4639-90a7-a06e4fcae511';
+const url = `http://localhost:8080`;
+//const API_KEY = '629308dd-9f99-4639-90a7-a06e4fcae511';
 const MAIN_VIDEO = '1af0jruup5gu';
 
 class Main extends React.Component {
@@ -21,7 +21,7 @@ class Main extends React.Component {
   //getting information from API for main video and side videos
   initialMount() {
     axios
-    .get(`${url}/videos/${MAIN_VIDEO}?api_key=${API_KEY}`)
+    .get(`${url}/videos/${MAIN_VIDEO}`) //?api_key=${API_KEY}
     .then(response => {
       this.setState({
         mainVideo: response.data,
@@ -31,7 +31,7 @@ class Main extends React.Component {
       console.log(error)
     }) 
     axios
-    .get(`${url}/videos/?api_key=${API_KEY}`)
+    .get(`${url}/videos/`) //?api_key=${API_KEY}
     .then(response => {
       this.setState({
         asideVideos: response.data,
@@ -52,7 +52,7 @@ class Main extends React.Component {
     if (typeof this.props.match.params.id === "undefined") {
       dynamicURL = '1af0jruup5gu'}
     axios
-    .get(`${url}/videos/${dynamicURL}?api_key=${API_KEY}`)
+    .get(`${url}/videos/${dynamicURL}`)  //?api_key=${API_KEY}
     .then(response => {
       if (this.state.mainVideo.id !== response.data.id) {
         this.setState({
@@ -73,9 +73,10 @@ class Main extends React.Component {
     if (typeof dynamicURL === "undefined") {
       dynamicURL = '1af0jruup5gu'}
     axios 
-    .post(`${url}/videos/${dynamicURL}/comments?api_key=${API_KEY}`, {
+    .post(`${url}/videos/${dynamicURL}/comments`, {  //?api_key=${API_KEY}
       "comment" : event.target.comment.value,
-      "name" : "Brainstation Man"
+      "name" : "Brainstation Man",
+      "timestamp" : Date.now()
     })
     .then(() => {
       this.initialMount();
