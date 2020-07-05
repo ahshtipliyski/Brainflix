@@ -16,6 +16,8 @@ app.use(express.json());
 
 app.use('/', videosRoutes);
 
+app.use(express.static('public'));
+
 app.listen(sPort, () => {
     console.log('Server is running on port ' + sPort);
 })
